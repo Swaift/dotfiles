@@ -27,4 +27,4 @@ RPROMPT="%{$fg_bold[white]%}%~%{$reset_color%}"
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 git config --global user.email "tawsifazad@gmail.com"
 git config --global user.name "Tawsif Azad"
-config config status.showUntrackedFiles no
+git config --global  status.showUntrackedFiles no
