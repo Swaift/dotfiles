@@ -16,6 +16,7 @@ compinit
 export class=/mnt/c/Users/Tawsif/Documents/_ut/EE312/
 export down=/mnt/c/Users/Tawsif/Documents/_downloads/
 export doc=/mnt/c/Users/Tawsif/Documents/
+export proj=/mnt/c/Users/Tawsif/Documents/_projects/
 
 autoload -Uz colors
 colors
