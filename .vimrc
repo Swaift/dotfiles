@@ -79,6 +79,7 @@ set cindent
 set ts=4
 set sw=4
 set hlsearch
+set ignorecase
 set smartcase
 syntax on
 
