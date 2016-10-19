@@ -22,7 +22,7 @@ autoload -Uz colors
 colors
 
 #PROMPT=%n%%%{" "%}
-PROMPT="%{$fg[yellow]%}%n%%%{$reset_color%} "
+PROMPT="%{$fg_bold[white]%}%n%%%{$reset_color%} "
 RPROMPT="%{$fg_bold[white]%}%~%{$reset_color%}"
 
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
