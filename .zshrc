@@ -33,4 +33,4 @@ git config --global  status.showUntrackedFiles no
 export DEVKITPRO=/home/tawsif/devkitPro
 export DEVKITARM=${DEVKITPRO}/devkitARM
 
-alias ls='ls -p'
+alias ls='ls -p1'
