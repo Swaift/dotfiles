@@ -32,7 +32,7 @@ Plugin 'nelstrom/vim-markdown-folding'
 call vundle#end()
 filetype plugin indent on
 
-let g:markdown_fenced_languages = ['c']
+let g:markdown_fenced_languages = ['c', 'cpp']
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
