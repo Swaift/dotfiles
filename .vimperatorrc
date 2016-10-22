@@ -1,0 +1,23 @@
+"3.15.0 (created: 2016/10/05 01:11:26)
+
+source! ~/.vimperatorrc.local
+
+"vim: set ft=vimperator:
+set gui=nonavigation
+
+nnoremap j 8j
+nnoremap k 8k
+nnoremap h 8h
+nnoremap l 8l
+
+noremap J gt
+noremap K gT
+
+noremap <c-s-p> i<c-s-p>
+noremap <c-v> i<c-v>
+noremap <c-c> i<c-c>
+
+set hintchars=asdfghjkl
+hi Hint         -append   background-color: #fb4934; color: #ffffff;
+hi HintElem               background-color: rgba(0,0,0,0);
+hi HintActive             background-color: rgba(0,0,0,0);
