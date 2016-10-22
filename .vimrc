@@ -112,6 +112,12 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
+
+map J 8j
+map K 8k
+map L 8l
+map H 8h
+
 set wmh=0
 set splitbelow
 set splitright
