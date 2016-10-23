@@ -3,7 +3,7 @@
 source! ~/.vimperatorrc.local
 
 "vim: set ft=vimperator:
-set gui=nonavigation
+set gui=navigation
 
 nnoremap j 8j
 nnoremap k 8k
@@ -21,6 +21,7 @@ noremap x :set apptab=true<cr>
 noremap s :set apptab=false<cr>
 
 set hintchars=asdfghjkl
-hi Hint         -append   background-color: #fb4934; color: #ffffff;
+"#fb4934
+hi Hint         -append   background-color: #800080; color: #ffffff;
 hi HintElem               background-color: rgba(0,0,0,0);
 hi HintActive             background-color: rgba(0,0,0,0);
