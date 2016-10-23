@@ -17,6 +17,9 @@ noremap <c-s-p> i<c-s-p>
 noremap <c-v> i<c-v>
 noremap <c-c> i<c-c>
 
+noremap x :set apptab=true<cr>
+noremap s :set apptab=false<cr>
+
 set hintchars=asdfghjkl
 hi Hint         -append   background-color: #fb4934; color: #ffffff;
 hi HintElem               background-color: rgba(0,0,0,0);
