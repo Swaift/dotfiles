@@ -121,6 +121,8 @@ map K 8k
 map L 8l
 map H 8h
 
+noremap <F12> <Esc>:syntax sync fromstart<CR>
+
 set wmh=0
 set splitbelow
 set splitright
