@@ -14,6 +14,7 @@ compinit
 # End of lines added by compinstall
 
 export class=/mnt/c/Users/Tawsif/Documents/_ut/EE312/
+export logic=/mnt/c/Users/Tawsif/Documents/_ut/EE316/
 export down=/mnt/c/Users/Tawsif/Documents/_downloads/
 export doc=/mnt/c/Users/Tawsif/Documents/
 export proj=/mnt/c/Users/Tawsif/Documents/_projects/
