@@ -40,12 +40,12 @@ nnoremap <c-w>E :SyntasticToggleMode<cr>
 let g:markdown_fenced_languages = ['c', 'cpp']
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 autocmd vimenter * wincmd p
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
