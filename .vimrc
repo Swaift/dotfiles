@@ -15,6 +15,8 @@ let g:ycm_confirm_extra_conf = 0
 let g:ConqueTerm_CloseOnEnd = 1
 let g:ConqueTerm_StartMessages = 0
 
+let g:syntastic_cpp_compiler_options = '-std=c++11'
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
