@@ -119,3 +119,4 @@ export DISPLAY=localhost:0.0
 nohup i3 &
 
 export TERM=xterm-256color
+
