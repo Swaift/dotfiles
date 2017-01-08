@@ -38,3 +38,5 @@ alias ls='ls -p1'
 
 export NVM_DIR="/home/tawsif/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+eval "$(thefuck --alias)"
