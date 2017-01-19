@@ -8,8 +8,6 @@ set cursorcolumn
 autocmd BufRead,BufNew *.md set filetype=markdown
 filetype off
 
-ab ` ```
-
 "let g:ycm_server_keep_logfiles = 1
 "let g:ycm_server_log_level = 'debug'
 let g:ycm_confirm_extra_conf = 0
