@@ -8,6 +8,8 @@ set cursorcolumn
 autocmd BufRead,BufNew *.md set filetype=markdown
 filetype off
 
+ab ` ```
+
 "let g:ycm_server_keep_logfiles = 1
 "let g:ycm_server_log_level = 'debug'
 let g:ycm_confirm_extra_conf = 0
@@ -39,7 +41,7 @@ filetype plugin indent on
 "let g:syntastic_mode_map = {'mode':'passive', 'active_filetypes':[], 'passive_filetypes':[]}
 nnoremap <c-w>E :SyntasticToggleMode<cr>
 
-let g:markdown_fenced_languages = ['c', 'cpp']
+let g:markdown_fenced_languages = ['c', 'cpp', 'java']
 
 autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
