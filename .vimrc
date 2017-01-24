@@ -36,7 +36,7 @@ Plugin 'nelstrom/vim-markdown-folding'
 call vundle#end()
 filetype plugin indent on
 
-"let g:syntastic_mode_map = {'mode':'passive', 'active_filetypes':[], 'passive_filetypes':[]}
+let g:syntastic_mode_map = {'mode':'active', 'active_filetypes':[], 'passive_filetypes':['java']}
 nnoremap <c-w>E :SyntasticToggleMode<cr>
 
 let g:markdown_fenced_languages = ['c', 'cpp', 'java']
@@ -130,3 +130,5 @@ noremap <F12> <Esc>:syntax sync fromstart<CR>
 set wmh=0
 set splitbelow
 set splitright
+
+command P !pdflatex *.tex
