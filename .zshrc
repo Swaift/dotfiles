@@ -17,7 +17,7 @@ export class=/mnt/c/Users/Tawsif/Documents/_ut/
 export down=/mnt/c/Users/Tawsif/Documents/_downloads/
 export doc=/mnt/c/Users/Tawsif/Documents/
 export proj=/mnt/c/Users/Tawsif/Documents/_projects/
-export win=/mnt/c/Users/Tawsif/
+export cv=/mnt/c/Users/Tawsif/Documents/_resumes/cv/
 
 autoload -Uz colors
 colors
