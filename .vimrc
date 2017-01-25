@@ -6,7 +6,7 @@ set nofoldenable
 set cursorline
 set cursorcolumn
 autocmd BufRead,BufNew *.md set filetype=markdown
-filetype off
+filetype plugin indent on
 
 "let g:ycm_server_keep_logfiles = 1
 "let g:ycm_server_log_level = 'debug'
