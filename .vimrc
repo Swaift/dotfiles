@@ -8,6 +8,8 @@ set cursorcolumn
 autocmd BufRead,BufNew *.md set filetype=markdown
 filetype plugin indent on
 
+autocmd FileType tex setlocal shiftwidth=2 tabstop=2
+
 "let g:ycm_server_keep_logfiles = 1
 "let g:ycm_server_log_level = 'debug'
 let g:ycm_confirm_extra_conf = 0
