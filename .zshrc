@@ -13,8 +13,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export class=/mnt/c/Users/Tawsif/Documents/_ut/
-export down=/mnt/c/Users/Tawsif/Documents/_downloads/
+export ut=/mnt/c/Users/Tawsif/Documents/_ut/
 export doc=/mnt/c/Users/Tawsif/Documents/
 export proj=/mnt/c/Users/Tawsif/Documents/_projects/
 export cv=/mnt/c/Users/Tawsif/Documents/_resumes/cv/
