@@ -36,7 +36,7 @@ export DEVKITARM=${DEVKITPRO}/devkitARM
 alias ls='ls -p1'
 alias :q='exit'
 
-export NVM_DIR="/home/tawsif/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="/home/tawsif/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-eval "$(thefuck --alias)"
+#eval "$(thefuck --alias)"
