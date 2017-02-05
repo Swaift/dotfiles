@@ -47,7 +47,7 @@ Plugin 'easymotion/vim-easymotion'
 call vundle#end()
 filetype plugin indent on
 
-let g:syntastic_mode_map = {'mode':'active', 'active_filetypes':[], 'passive_filetypes':['java']}
+let g:syntastic_mode_map = {'mode':'active', 'active_filetypes':[], 'passive_filetypes':['java','asm']}
 nnoremap <c-w>E :SyntasticToggleMode<cr>
 
 let g:markdown_fenced_languages = ['c', 'cpp', 'java']
