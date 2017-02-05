@@ -1,3 +1,7 @@
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+
 set nocompatible
 set ttimeoutlen=100
 set backspace=indent,eol,start
@@ -7,6 +11,9 @@ set cursorline
 set cursorcolumn
 autocmd BufRead,BufNew *.md set filetype=markdown
 filetype plugin indent on
+
+set visualbell
+set t_vb=
 
 autocmd FileType tex setlocal shiftwidth=4 tabstop=4
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
@@ -135,3 +142,9 @@ set splitbelow
 set splitright
 
 command P !pdflatex *.tex
+
+highlight Comment gui=italic
+highlight Comment cterm=italic
+set t_ZH=[3m
+set t_ZR=[23m
+
