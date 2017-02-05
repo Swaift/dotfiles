@@ -42,6 +42,7 @@ Plugin 'haya14busa/incsearch.vim'
 "Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/Conque-GDB'
 Plugin 'nelstrom/vim-markdown-folding'
+Plugin 'easymotion/vim-easymotion'
 
 call vundle#end()
 filetype plugin indent on
