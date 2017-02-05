@@ -22,8 +22,10 @@ autoload -Uz colors
 colors
 
 #PROMPT=%n%%%{" "%}
-PROMPT="%{$fg_bold[white]%}%n%%%{$reset_color%} "
-RPROMPT="%{$fg_bold[white]%}%~%{$reset_color%}"
+#PROMPT="%{$fg_bold[white]%}%n%%%{$reset_color%} "
+#RPROMPT="%{$fg_bold[white]%}%~%{$reset_color%}"
+PROMPT="%{[3m%}%{$fg_bold[white]%}%n%%%{$reset_color%}%{[0m%} "
+RPROMPT="%{[3m%}%{$fg_bold[white]%}%~%{$reset_color%}%{[0m%} "
 
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 git config --global user.email "tawsifazad@gmail.com"
