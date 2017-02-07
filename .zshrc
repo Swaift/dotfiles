@@ -28,9 +28,9 @@ PROMPT="%{[3m%}%{$fg_bold[white]%}%n%%%{$reset_color%}%{[0m%} "
 RPROMPT="%{[3m%}%{$fg_bold[white]%}%~%{$reset_color%}%{[0m%} "
 
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
-git config --global user.email "tawsifazad@gmail.com"
-git config --global user.name "Tawsif Azad"
-git config --global  status.showUntrackedFiles no
+#git config --global user.email "tawsifazad@gmail.com"
+#git config --global user.name "Tawsif Azad"
+#git config --global  status.showUntrackedFiles no
 
 export DEVKITPRO=/home/tawsif/devkitPro
 export DEVKITARM=${DEVKITPRO}/devkitARM
