@@ -53,3 +53,4 @@ fancy-ctrl-z () {
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
+#alias tmux="env TERM=xterm-256color tmux -2"

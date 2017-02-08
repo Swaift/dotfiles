@@ -151,6 +151,7 @@ let mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
+nnoremap <Leader>v V
 vmap <Leader>y "+y
 vmap <Leader>d "+d
 nmap <Leader>p "+p
