@@ -40,7 +40,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'haya14busa/incsearch.vim'
 "Plugin 'scrooloose/nerdtree'
-"Plugin 'vim-scripts/Conque-GDB'
+Plugin 'vim-scripts/Conque-GDB'
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'easymotion/vim-easymotion'
 
@@ -152,10 +152,10 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>x :x<CR>
 nnoremap <Leader>v V
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
+vnoremap <Leader>y "+y
+vnoremap <Leader>d "+d
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+vnoremap <Leader>p "+p
+vnoremap <Leader>P "+P
 
