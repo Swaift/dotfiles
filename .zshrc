@@ -17,6 +17,7 @@ export ut=/mnt/c/Users/Tawsif/Documents/_ut/
 export doc=/mnt/c/Users/Tawsif/Documents/
 export proj=/mnt/c/Users/Tawsif/Documents/_projects/
 export cv=/mnt/c/Users/Tawsif/Documents/_resumes/cv/
+export down=/mnt/c/Users/Tawsif/Downloads/
 
 autoload -Uz colors
 colors
@@ -54,3 +55,6 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 #alias tmux="env TERM=xterm-256color tmux -2"
+
+alias jc='javac -d ../bin *.java'
+alias j='java -cp ../bin assignment2.Driver'
