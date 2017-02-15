@@ -36,7 +36,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 export DEVKITPRO=/home/tawsif/devkitPro
 export DEVKITARM=${DEVKITPRO}/devkitARM
 
-alias ls='ls -p1'
+alias ls='ls -p1 -X'
 alias :q='exit'
 
 #export NVM_DIR="/home/tawsif/.nvm"
@@ -56,8 +56,13 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 #alias tmux="env TERM=xterm-256color tmux -2"
 
-alias jc='javac -d ../bin *.java'
-alias j='java -cp ../bin assignment2.Driver'
+#alias jc='javac -d ../bin *.java'
+#alias j='java -cp ../bin assignment2.Driver'
+alias jc='javac -d ./bin *.java'
+alias j='java -cp ./bin Driver'
+alias jt='java -cp ./bin DriverTies'
+
+bindkey "^?" backward-delete-char
 
 # github ssh-agent script
 
