@@ -2,6 +2,12 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
+"let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+"let g:airline_powerline_fonts = 1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
 set nocompatible
 set ttimeoutlen=100
 set backspace=indent,eol,start

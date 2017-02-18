@@ -56,11 +56,14 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 #alias tmux="env TERM=xterm-256color tmux -2"
 
-#alias jc='javac -d ../bin *.java'
-#alias j='java -cp ../bin assignment2.Driver'
-alias jc='javac -d ./bin *.java'
-alias j='java -cp ./bin Driver'
-alias jt='java -cp ./bin DriverTies'
+alias jc='javac -d ../bin *.java'
+alias j='java -cp ../bin assignment2.Driver'
+
+#alias jc='javac -d ./bin *.java'
+#alias j='java -cp ./bin Driver'
+#alias jt='java -cp ./bin DriverTies'
+
+alias g='gcc -ansi -o simulate lc3bsim2.c'
 
 bindkey "^?" backward-delete-char
 
