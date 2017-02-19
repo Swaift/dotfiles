@@ -129,4 +129,4 @@ alias :q='exit'
 sh ~/.fehbg &
 i3 &> /dev/null &
 gnome-terminal &> /dev/null && wmctrl -a Terminal &> /dev/null &
-#mopidy &> /dev/null &
+mopidy &> /dev/null &
