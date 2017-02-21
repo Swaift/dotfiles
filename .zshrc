@@ -38,6 +38,13 @@ export DEVKITARM=${DEVKITPRO}/devkitARM
 
 alias ls='ls -p1 -X'
 alias :q='exit'
+alias n='ncmpcpp'
+alias nn='ncmpcpp next'
+alias np='ncmpcpp prev'
+alias nr='ncmpcpp next && ncmpcpp prev' # Replay
+alias nt='ncmpcpp toggle'
+alias nnp='ncmpcpp --now-playing'
+alias whatismyip="curl httpbin.org/ip 2>/dev/null | grep origin | cut -d '\"' -f 4"
 
 #export NVM_DIR="/home/tawsif/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -56,16 +63,20 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 #alias tmux="env TERM=xterm-256color tmux -2"
 
-alias jc='javac -d ../bin *.java'
-alias j='java -cp ../bin assignment2.Driver'
+#alias jc='javac -d ../bin *.java'
+#alias j='java -cp ../bin assignment2.Driver'
 
 #alias jc='javac -d ./bin *.java'
 #alias j='java -cp ./bin Driver'
 #alias jt='java -cp ./bin DriverTies'
 
-alias g='gcc -ansi -o simulate lc3bsim2.c'
+alias jc='javac -cp /usr/share/java/junit4-4.11.jar -d ../bin *.java'
+alias j='java -cp ../bin -Xss1g assignment3.Main'
+alias jt='java -cp /usr/share/java/junit4-4.11.jar:/usr/share/java/hamcrest-core-1.3.jar:../bin -Xss1g org.junit.runner.JUnitCore assignment3.TestSuite'
 
 bindkey "^?" backward-delete-char
+
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 # github ssh-agent script
 

@@ -8,6 +8,7 @@ set encoding=utf-8
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
+
 set nocompatible
 set ttimeoutlen=100
 set backspace=indent,eol,start
@@ -49,6 +50,7 @@ Plugin 'haya14busa/incsearch.vim'
 "Plugin 'vim-scripts/Conque-GDB'
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 filetype plugin indent on
@@ -108,10 +110,11 @@ syntax on
 
 "execute pathogen#infect()
 
-let g:solarized_bold=0
-let g:solarized_termcolors=256
+"let g:solarized_bold=0
+"let g:solarized_termcolors=256
+
+set background=dark
 colorscheme gruvbox
-set bg=dark
 let g:airline_theme='gruvbox'
 
 highlight Normal             ctermbg=NONE
@@ -164,4 +167,3 @@ nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
 vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
-

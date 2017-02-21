@@ -117,16 +117,17 @@ fi
 cd ~
 export DISPLAY=localhost:0.0
 
-export TERM=xterm-256color
+#export TERM=xterm-256color
 
 export PATH="$HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:$PATH"
 
-#urxvtd -q -o -f
-#xrdb ~/.Xresources
+urxvtd -q -o -f
+xrdb ~/.Xresources
 
 alias :q='exit'
 
 sh ~/.fehbg &
 i3 &> /dev/null &
-gnome-terminal &> /dev/null && wmctrl -a Terminal &> /dev/null &
+#gnome-terminal &> /dev/null && wmctrl -a Terminal &> /dev/null &
 mopidy &> /dev/null &
+compton &> /dev/null &
