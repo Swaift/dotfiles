@@ -51,11 +51,12 @@ alias ai='sudo apt-get install'
 alias a='sudo apt-get remove'
 
 if [[ -x "`whence -p dircolors`" ]]; then
-  eval `dircolors`
-  alias ls='ls -F -p1 -X --color=auto'
+  eval `dircolors -b ~/.dir_colors`
+  alias ls='ls -F -p1 -X --color'
 else
   alias ls='ls -F -p1 -X'
 fi
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 #alias z='zathura &> /dev/null'
 z () {
@@ -102,6 +103,8 @@ source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
     #fi
 #fi
 #zplug load
+
+umask 022
 
 # github ssh-agent script
 

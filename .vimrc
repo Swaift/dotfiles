@@ -51,6 +51,8 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'morhetz/gruvbox'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'jeetsukumaran/vim-buffergator'
 
 call vundle#end()
 filetype plugin indent on
@@ -82,7 +84,7 @@ map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -168,3 +170,16 @@ nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
 vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
+
+" Ctrl P
+"let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'ra'
+
+" Buffergator
+let g:buffergator_suppress_keymaps = 1
+let g:buffergator_viewport_split_policy = 'R'
+nmap <leader>j :bnext<cr>
+nmap <leader>k :bprevious<cr>
+nmap <leader>b :BuffergatorOpen<cr>
+nmap <leader>t :enew<cr>
+nmap <leader>d :bp <BAR> bd #<cr>
