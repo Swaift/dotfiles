@@ -45,6 +45,16 @@ alias nr='ncmpcpp next && ncmpcpp prev' # Replay
 alias nt='ncmpcpp toggle'
 alias nnp='ncmpcpp --now-playing'
 alias whatismyip="curl httpbin.org/ip 2>/dev/null | grep origin | cut -d '\"' -f 4"
+#alias z='zathura &> /dev/null'
+z () {
+    zathura &> /dev/null "$*" & disown;
+}
+
+same-dir-terminal () {
+    urxvtc -e zsh &> /dev/null &
+}
+zle -N same-dir-terminal
+bindkey '' same-dir-terminal
 
 #export NVM_DIR="/home/tawsif/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

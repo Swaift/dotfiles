@@ -15,7 +15,7 @@ set backspace=indent,eol,start
 set foldmethod=indent
 set nofoldenable
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 autocmd BufRead,BufNew *.md set filetype=markdown
 filetype plugin indent on
 
@@ -82,7 +82,7 @@ map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -130,8 +130,9 @@ highlight SignColumn         ctermbg=NONE
 highlight CursorLine         ctermbg=NONE
 highlight Folded             ctermbg=NONE
 highlight FoldColumn         ctermbg=NONE
-highlight NonText            ctermbg=NONE
 highlight clear LineNr
+
+
 
 map <C-J> <C-W>j
 map <C-K> <C-W>k
