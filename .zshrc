@@ -2,7 +2,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd extendedglob nomatch
+setopt appendhistory autocd extendedglob nomatch completeinword interactivecomments
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -12,6 +12,7 @@ zstyle :compinstall filename '/home/tawsif/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 export ut=/mnt/c/Users/Tawsif/Documents/_ut/
 export doc=/mnt/c/Users/Tawsif/Documents/
@@ -25,7 +26,7 @@ colors
 #PROMPT=%n%%%{" "%}
 #PROMPT="%{$fg_bold[white]%}%n%%%{$reset_color%} "
 #RPROMPT="%{$fg_bold[white]%}%~%{$reset_color%}"
-PROMPT="%{[3m%}%{$fg_bold[white]%}%n%%%{$reset_color%}%{[0m%} "
+PROMPT="%{[3m%}%{$fg_bold[white]%}%n%#%{$reset_color%}%{[0m%} "
 RPROMPT="%{[3m%}%{$fg_bold[white]%}%~%{$reset_color%}%{[0m%} "
 
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
@@ -36,7 +37,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 export DEVKITPRO=/home/tawsif/devkitPro
 export DEVKITARM=${DEVKITPRO}/devkitARM
 
-alias ls='ls -p1 -X'
 alias :q='exit'
 alias n='ncmpcpp'
 alias nn='ncmpcpp next'
@@ -45,6 +45,18 @@ alias nr='ncmpcpp next && ncmpcpp prev' # Replay
 alias nt='ncmpcpp toggle'
 alias nnp='ncmpcpp --now-playing'
 alias whatismyip="curl httpbin.org/ip 2>/dev/null | grep origin | cut -d '\"' -f 4"
+alias ll='ls -l'
+alias la='ls -a'
+alias ai='sudo apt-get install'
+alias a='sudo apt-get remove'
+
+if [[ -x "`whence -p dircolors`" ]]; then
+  eval `dircolors`
+  alias ls='ls -F -p1 -X --color=auto'
+else
+  alias ls='ls -F -p1 -X'
+fi
+
 #alias z='zathura &> /dev/null'
 z () {
     zathura &> /dev/null "$*" & disown;
@@ -73,13 +85,6 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 #alias tmux="env TERM=xterm-256color tmux -2"
 
-#alias jc='javac -d ../bin *.java'
-#alias j='java -cp ../bin assignment2.Driver'
-
-#alias jc='javac -d ./bin *.java'
-#alias j='java -cp ./bin Driver'
-#alias jt='java -cp ./bin DriverTies'
-
 alias jc='javac -cp /usr/share/java/junit4-4.11.jar -d ../bin *.java'
 alias j='java -cp ../bin -Xss1g assignment3.Main'
 alias jt='java -cp /usr/share/java/junit4-4.11.jar:/usr/share/java/hamcrest-core-1.3.jar:../bin -Xss1g org.junit.runner.JUnitCore assignment3.TestSuite'
@@ -87,6 +92,16 @@ alias jt='java -cp /usr/share/java/junit4-4.11.jar:/usr/share/java/hamcrest-core
 bindkey "^?" backward-delete-char
 
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+
+#source ~/.zplug/init.zsh
+#zplug "zsh-users/zsh-syntax-highlighting", defer:2
+#if ! zplug check; then
+    #printf "Install? [y/N]: "
+    #if read -q; then
+        #echo; zplug install
+    #fi
+#fi
+#zplug load
 
 # github ssh-agent script
 
