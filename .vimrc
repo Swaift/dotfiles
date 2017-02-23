@@ -53,6 +53,7 @@ Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 call vundle#end()
 filetype plugin indent on
@@ -85,6 +86,7 @@ map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#close_symbol = 0
 
 "set statusline+=%#warningmsg#
 "set statusline+=%{syntasticstatuslineflag()}
@@ -131,8 +133,8 @@ highlight FoldColumn         ctermbg=NONE
 "highlight clear LineNr
 highlight VertSplit          ctermbg=NONE
 
-"set fillchars=vert:\│,stl:─
-set fillchars=vert:\│,stl:―,stlnc:―
+"set fillchars=vert:\│
+set fillchars=vert:\│,stl:\_,stlnc:\_
 
 map <C-J> <C-W>j
 map <C-K> <C-W>k
