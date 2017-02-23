@@ -15,6 +15,7 @@ set backspace=indent,eol,start
 set foldmethod=indent
 set nofoldenable
 set cursorline
+set hidden
 "set cursorcolumn
 autocmd BufRead,BufNew *.md set filetype=markdown
 filetype plugin indent on

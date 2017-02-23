@@ -49,6 +49,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias ai='sudo apt-get install'
 alias a='sudo apt-get remove'
+alias p='pipes.sh -p 2'
 
 if [[ -x "`whence -p dircolors`" ]]; then
   eval `dircolors -b ~/.dir_colors`
