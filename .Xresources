@@ -6,12 +6,13 @@ urxvt*scrollBar: false
 !urxvt*shading: 30
 urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0200/C800
-
-urxvt*font: xft:operatormono:size=10
+urxvt*font: xft:operatormono:size=9.8
+urxvt*letterSpace: -1
 urxvt*buffered: false
-urxvt.perl-ext-common: default,clipboard
-urxvt.keysym.Shift-Control-V: perl:clipboard:paste
-urxvt.iso14755: false
+urxvt*perl-ext-common: default,clipboard
+urxvt*keysym.Shift-Control-V: perl:clipboard:paste
+urxvt*iso14755: false
+urxvt*internalBorder: 40
 
 !
 ! hard contrast: *background: #1d2021

@@ -1,8 +1,14 @@
+#bar {
+    #i3bar_command ~/.i3/lemonbar/i3_lemonbar.py
+#}
+
 #i3-gaps settings
 for_window [class="^.*"] border pixel 0
 gaps inner 40
-gaps outer 15
-smart_gaps on
+#gaps outer 15
+#smart_gaps on
+
+focus_follows_mouse no
 
 # start a terminal
 bindsym Mod1+Return exec urxvtc -e zsh

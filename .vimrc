@@ -40,16 +40,16 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'haya14busa/incsearch.vim'
 "Plugin 'scrooloose/nerdtree'
 "Plugin 'vim-scripts/Conque-GDB'
 Plugin 'nelstrom/vim-markdown-folding'
-Plugin 'easymotion/vim-easymotion'
+"Plugin 'easymotion/vim-easymotion'
 Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
@@ -86,9 +86,9 @@ map g# <Plug>(incsearch-nohl-g#)
 
 let g:airline#extensions#tabline#enabled = 1
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{syntasticstatuslineflag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -108,12 +108,8 @@ set sw=4
 set hlsearch
 set ignorecase
 set smartcase
+set noshowmode
 syntax on
-
-"execute pathogen#infect()
-
-"let g:solarized_bold=0
-"let g:solarized_termcolors=256
 
 set background=dark
 colorscheme gruvbox
@@ -132,19 +128,23 @@ highlight SignColumn         ctermbg=NONE
 highlight CursorLine         ctermbg=NONE
 highlight Folded             ctermbg=NONE
 highlight FoldColumn         ctermbg=NONE
-highlight clear LineNr
+"highlight clear LineNr
+highlight VertSplit          ctermbg=NONE
 
-
+"set fillchars=vert:\│,stl:─
+set fillchars=vert:\│,stl:―,stlnc:―
 
 map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
 
-map J 8j
-map K 8k
-map L 8l
-map H 8h
+noremap M J
+noremap J 8j
+noremap K 8k
+noremap L 8l
+noremap H 8h
+nnoremap Y y$
 
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 
@@ -152,7 +152,7 @@ set wmh=0
 set splitbelow
 set splitright
 
-command P !pdflatex *.tex
+command! P !pdflatex *.tex
 
 highlight Comment gui=italic
 highlight Comment cterm=italic
@@ -172,8 +172,13 @@ vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 
 " Ctrl P
-"let g:ctrlp_show_hidden = 1
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " Buffergator
 let g:buffergator_suppress_keymaps = 1
@@ -183,3 +188,10 @@ nmap <leader>k :bprevious<cr>
 nmap <leader>b :BuffergatorOpen<cr>
 nmap <leader>t :enew<cr>
 nmap <leader>d :bp <BAR> bd #<cr>
+
+augroup myvimrchooks
+    au!
+    autocmd bufwritepost .vimrc source ~/.vimrc
+    autocmd bufwritepost .vimrc :AirlineRefresh
+augroup END
+
