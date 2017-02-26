@@ -55,6 +55,8 @@ Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'alvan/vim-closetag'
 
 call vundle#end()
 filetype plugin indent on

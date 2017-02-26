@@ -16,6 +16,7 @@ incremental_seeking = "yes"
 ignore_leading_the = "yes"
 browser_sort_mode = "mtime"
 progressbar_elapsed_color = default
+allow_for_physical_item_deletion = yes
 
 song_columns_list_format = (25)[blue]{a} (45)[]{t} (25)[magenta]{b} (5)[green]{l}
 alternative_header_second_line_format = "{$5$b%a$9} - {$6$b%b$9}"
