@@ -37,19 +37,12 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 export DEVKITPRO=/home/tawsif/devkitPro
 export DEVKITARM=${DEVKITPRO}/devkitARM
 
-alias :q='exit'
 alias n='ncmpcpp'
-alias nn='ncmpcpp next'
-alias np='ncmpcpp prev'
-alias nr='ncmpcpp next && ncmpcpp prev' # Replay
-alias nt='ncmpcpp toggle'
-alias nnp='ncmpcpp --now-playing'
 alias whatismyip="curl httpbin.org/ip 2>/dev/null | grep origin | cut -d '\"' -f 4"
 alias ll='ls -l'
 alias la='ls -a'
 alias ai='sudo apt-get install'
-alias a='sudo apt-get remove'
-alias p='pipes.sh -p 2'
+alias ar='sudo apt-get remove'
 
 if [[ -x "`whence -p dircolors`" ]]; then
   eval `dircolors -b ~/.dir_colors`

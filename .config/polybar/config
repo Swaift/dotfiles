@@ -1,0 +1,37 @@
+[bar/top]
+font-0 = "operatormono-13;1"
+font-1 = "font-awesome-13;1"
+background = #c8000002
+foreground = #ebdbb2
+height = 36
+spacing = 2
+padding-right = 2
+module-margin-left = 3
+module-margin-right = 3
+modules-center = mpd
+modules-left = i3
+modules-right = date
+
+[module/i3]
+type = internal/i3
+label-focused-underline = #ebdbb2
+label-unfocused-foreground = #7c6f64
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song> <bar-progress> <label-time>
+label-song = %title%
+bar-progress-width = 20
+primary = #ebdbb2
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+bar-progress-empty-foreground = #7c6f64
+
+[module/date]
+type = internal/date
+time = %-I:%M %p
+label = %time%
+
+[settings]
+screenchange-reload = true

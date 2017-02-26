@@ -1,6 +1,11 @@
 !urxvt*background: Black
 !urxvt*foreground: #ebdbb2
 urxvt*scrollBar: false
+urxvt*scrollTtyOutput: false
+urxvt*scrollWithBuffer: true
+urxvt*scrollWithKeypress: true
+urxvt*saveLines: 100000
+
 
 !urxvt*transparent: true
 !urxvt*shading: 30
@@ -43,3 +48,5 @@ urxvt*internalBorder: 40
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ffffff
+
+*cursorColor: #ebdbb2

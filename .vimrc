@@ -190,7 +190,7 @@ nmap <leader>j :bnext<cr>
 nmap <leader>k :bprevious<cr>
 nmap <leader>b :BuffergatorOpen<cr>
 nmap <leader>t :enew<cr>
-nmap <leader>d :bp <BAR> bd #<cr>
+"nmap <leader>d :bp <BAR> bd #<cr>
 
 augroup myvimrchooks
     au!
@@ -198,3 +198,20 @@ augroup myvimrchooks
     autocmd bufwritepost .vimrc :AirlineRefresh
 augroup END
 
+" w : forward to next word beginning with alphanumeric char
+" b : backward to prev word beginning with alphanumeric char
+function! <SID>GotoPattern(pattern, dir) range
+    let g:_saved_search_reg = @/
+    let l:flags = "We"
+    if a:dir == "b"
+        let l:flags .= "b"
+    endif
+    for i in range(v:count1)
+        call search(a:pattern, l:flags)
+    endfor
+    let @/ = g:_saved_search_reg
+endfunction
+nnoremap <silent> w :<C-U>call <SID>GotoPattern('\(^\\|\<\)[A-Za-z0-9_]', 'f')<CR>
+vnoremap <silent> w :<C-U>let g:_saved_search_reg=@/<CR>gv/\(^\\|\<\)[A-Za-z0-9_]<CR>:<C-U>let @/=g:_saved_search_reg<CR>gv
+nnoremap <silent> b :<C-U>call <SID>GotoPattern('\(^\\|\<\)[A-Za-z0-9_]', 'b')<CR>
+vnoremap <silent> b :<C-U>let g:_saved_search_reg=@/<CR>gv?\(^\\|\<\)[A-Za-z0-9_]<CR>:<C-U>let @/=g:_saved_search_reg<CR>gv

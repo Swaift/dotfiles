@@ -1,14 +1,27 @@
 #bar {
-    #i3bar_command ~/.i3/lemonbar/i3_lemonbar.py
+#    #i3bar_command ~/.i3/lemonbar/i3_lemonbar.py
+#    i3bar_command i3bar
+#    position top
 #}
 
 #i3-gaps settings
 for_window [class="^.*"] border pixel 0
-gaps inner 40
+gaps inner 20
 #gaps outer 15
 #smart_gaps on
 
+bindsym Mod1+o exec --no-startup-id "if [ `i3-msg -t get_tree | grep -Po \
+    '.*\\"gaps\\":{\\"inner\\":\K(-|)[0-9]+(?=.*\\"focused\\":true)'` -eq 0 ]; then \
+        i3-msg gaps inner current set 0; \
+    else \
+        i3-msg gaps inner current set 20; \
+    fi"
+
 focus_follows_mouse no
+
+# mpd control
+#bindsym Mod1+n exec ~/.i3/mpc_toggle.sh
+bindsym Mod1+n exec mpc toggle
 
 # start a terminal
 bindsym Mod1+Return exec urxvtc -e zsh
@@ -88,4 +101,7 @@ mode "resize" {
 
 bindsym Mod1+r mode "resize"
 
+bindsym Mod1+p exec --no-startup-id $HOME/.config/polybar/launch.sh
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec urxvtc -e zsh
