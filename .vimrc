@@ -1,3 +1,4 @@
+runtime macros/matchit.vim
 au BufNewFile,BufRead *.ejs set filetype=html
 let g:closetag_filenames = "*.html,*.xhtml,*.ejs"
 
