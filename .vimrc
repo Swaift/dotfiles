@@ -1,3 +1,6 @@
+au BufNewFile,BufRead *.ejs set filetype=html
+let g:closetag_filenames = "*.html,*.xhtml,*.ejs"
+
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif

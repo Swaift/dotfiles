@@ -121,7 +121,8 @@ export DISPLAY=localhost:0.0
 
 #export PATH="$HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:$PATH"
 
-mopidy &> /dev/null &
+#mopidy &> /dev/null &
+$HOME/.config/mopidy/launch.sh
 
 compton &> /dev/null &
 urxvtd -q -o -f
