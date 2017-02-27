@@ -122,11 +122,11 @@ export DISPLAY=localhost:0.0
 #export PATH="$HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:$PATH"
 
 #mopidy &> /dev/null &
-$HOME/.config/mopidy/launch.sh
+#$HOME/.config/mopidy/launch.sh
 
-compton &> /dev/null &
-urxvtd -q -o -f
-xrdb ~/.Xresources
-sh ~/.fehbg &
+#compton &> /dev/null &
+#urxvtd -q -o -f
+#xrdb ~/.Xresources
+#sh ~/.fehbg &
 i3 &> /dev/null &
 #bspwm &> /dev/null &

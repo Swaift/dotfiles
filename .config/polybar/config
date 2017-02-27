@@ -20,6 +20,8 @@ label-unfocused-foreground = #7c6f64
 [module/mpd]
 type = internal/mpd
 format-online = <label-song> <bar-progress> <label-time>
+format-offline = <label-offline>
+label-offline = mpd offline
 label-song = %title%
 bar-progress-width = 20
 primary = #ebdbb2

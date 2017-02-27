@@ -15,7 +15,8 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 export ut=/mnt/c/Users/Tawsif/Documents/_ut/
-export doc=/mnt/c/Users/Tawsif/Documents/
+export docs=/mnt/c/Users/Tawsif/Documents/
+export taws=/mnt/c/Users/Tawsif/
 export proj=/mnt/c/Users/Tawsif/Documents/_projects/
 export cv=/mnt/c/Users/Tawsif/Documents/_resumes/cv/
 export down=/mnt/c/Users/Tawsif/Downloads/
@@ -29,10 +30,8 @@ colors
 PROMPT="%{[3m%}%{$fg_bold[white]%}%n%#%{$reset_color%}%{[0m%} "
 RPROMPT="%{[3m%}%{$fg_bold[white]%}%~%{$reset_color%}%{[0m%} "
 
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
-#git config --global user.email "tawsifazad@gmail.com"
-#git config --global user.name "Tawsif Azad"
-#git config --global  status.showUntrackedFiles no
+alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+alias wsl='/usr/bin/git --git-dir=$HOME/.wsl/ --work-tree=/mnt/c/Users/Tawsif'
 
 export DEVKITPRO=/home/tawsif/devkitPro
 export DEVKITARM=${DEVKITPRO}/devkitARM

@@ -105,4 +105,7 @@ bindsym Mod1+p exec --no-startup-id $HOME/.config/polybar/launch.sh
 bindsym Mod1+m exec --no-startup-id $HOME/.config/mopidy/launch.sh
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec urxvtc -e zsh
+exec_always --no-startup-id compton
+exec_always --no-startup-id sh ~/.fehbg
+exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id urxvtd -q -o -f && urxvtc -e zsh
