@@ -1,3 +1,5 @@
+let g:syntastic_cpp_include_dirs = ['inc']
+
 runtime macros/matchit.vim
 au BufNewFile,BufRead *.ejs set filetype=html
 let g:closetag_filenames = "*.html,*.xhtml,*.ejs"
@@ -58,7 +60,7 @@ Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+"Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'alvan/vim-closetag'
 

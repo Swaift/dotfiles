@@ -1,14 +1,10 @@
-#bar {
-#    #i3bar_command ~/.i3/lemonbar/i3_lemonbar.py
-#    i3bar_command i3bar
-#    position top
-#}
-
 #i3-gaps settings
 for_window [class="^.*"] border pixel 0
 gaps inner 20
 #gaps outer 15
 #smart_gaps on
+
+for_window [class="game" instance="game"] floating enable
 
 bindsym Mod1+o exec --no-startup-id "if [ `i3-msg -t get_tree | grep -Po \
     '.*\\"gaps\\":{\\"inner\\":\K(-|)[0-9]+(?=.*\\"focused\\":true)'` -eq 0 ]; then \
@@ -18,6 +14,11 @@ bindsym Mod1+o exec --no-startup-id "if [ `i3-msg -t get_tree | grep -Po \
     fi"
 
 focus_follows_mouse no
+
+# floating control
+bindsym Mod1+Shift+f floating toggle
+bindsym Mod1+Shift+d focus mode_toggle
+floating_modifier Mod1
 
 # mpd control
 #bindsym Mod1+n exec ~/.i3/mpc_toggle.sh

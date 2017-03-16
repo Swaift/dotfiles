@@ -15,11 +15,12 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 export ut=/mnt/c/Users/Tawsif/Documents/_ut/
-export docs=/mnt/c/Users/Tawsif/Documents/
+export doc=/mnt/c/Users/Tawsif/Documents/
 export taws=/mnt/c/Users/Tawsif/
 export proj=/mnt/c/Users/Tawsif/Documents/_projects/
 export cv=/mnt/c/Users/Tawsif/Documents/_resumes/cv/
 export down=/mnt/c/Users/Tawsif/Downloads/
+export lab=/mnt/c/Users/Tawsif/Documents/_ut/comp/labs/lab3/
 
 autoload -Uz colors
 colors
@@ -42,6 +43,13 @@ alias ll='ls -l'
 alias la='ls -a'
 alias ai='sudo apt-get install'
 alias ar='sudo apt-get remove'
+alias s='ssh toad'
+ss () {
+    scp "$*" toad:.;
+}
+
+alias m='make'
+alias mm='make && make test'
 
 if [[ -x "`whence -p dircolors`" ]]; then
   eval `dircolors -b ~/.dir_colors`
@@ -79,9 +87,9 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 #alias tmux="env TERM=xterm-256color tmux -2"
 
-alias jc='javac -cp /usr/share/java/junit4-4.11.jar -d ../bin *.java'
-alias j='java -cp ../bin -Xss1g assignment3.Main'
-alias jt='java -cp /usr/share/java/junit4-4.11.jar:/usr/share/java/hamcrest-core-1.3.jar:../bin -Xss1g org.junit.runner.JUnitCore assignment3.TestSuite'
+alias jc='javac -cp /usr/share/java/junit4-4.11.jar -d bin src/assignment4/*.java test_sample/assignment4/*.java'
+alias j='java -cp bin assignment4.Main'
+alias jt='java -cp /usr/share/java/junit4-4.11.jar:/usr/share/java/hamcrest-core-1.3.jar:bin org.junit.runner.JUnitCore assignment4.A4SampleTest2'
 
 bindkey "^?" backward-delete-char
 
