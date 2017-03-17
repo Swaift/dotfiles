@@ -1,3 +1,5 @@
+let NERDSpaceDelims = 1
+
 let g:syntastic_cpp_include_dirs = ['inc']
 
 runtime macros/matchit.vim

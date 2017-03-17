@@ -47,9 +47,17 @@ alias s='ssh toad'
 ss () {
     scp "$*" toad:.;
 }
+sr () {
+    scp toad:isaprogram .;
+}
+alias gs='git status'
+alias gc='git commit -am'
+alias gp='git push origin master'
+alias gd='git diff'
 
 alias m='make'
 alias mm='make && make test'
+alias mc='make clean'
 
 if [[ -x "`whence -p dircolors`" ]]; then
   eval `dircolors -b ~/.dir_colors`
