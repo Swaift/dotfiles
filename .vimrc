@@ -57,14 +57,16 @@ Plugin 'scrooloose/syntastic'
 Plugin 'haya14busa/incsearch.vim'
 "Plugin 'scrooloose/nerdtree'
 "Plugin 'vim-scripts/Conque-GDB'
-Plugin 'nelstrom/vim-markdown-folding'
+" Plugin 'nelstrom/vim-markdown-folding'
 "Plugin 'easymotion/vim-easymotion'
 Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'jeetsukumaran/vim-buffergator'
+" Plugin 'jeetsukumaran/vim-buffergator'
 "Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'alvan/vim-closetag'
+" Plugin 'vim-scripts/html-improved-indentation'
+Plugin 'dkarter/bullets.vim'
 
 call vundle#end()
 filetype plugin indent on
