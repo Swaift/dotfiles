@@ -5,6 +5,8 @@ gaps inner 20
 #smart_gaps on
 
 for_window [class="game" instance="game"] floating enable
+for_window [class="assignment5.Main" instance="assignment5.Main"] floating enable
+for_window [class="assignment7.ClientMain" instance="assignment7.ClientMain"] floating enable
 
 bindsym Mod1+o exec --no-startup-id "if [ `i3-msg -t get_tree | grep -Po \
     '.*\\"gaps\\":{\\"inner\\":\K(-|)[0-9]+(?=.*\\"focused\\":true)'` -eq 0 ]; then \

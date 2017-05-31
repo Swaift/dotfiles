@@ -1,3 +1,5 @@
+set wrap lbr
+let g:markdown_fold_style = 'nested'
 let NERDSpaceDelims = 1
 
 let g:syntastic_cpp_include_dirs = ['inc']
@@ -57,7 +59,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'haya14busa/incsearch.vim'
 "Plugin 'scrooloose/nerdtree'
 "Plugin 'vim-scripts/Conque-GDB'
-" Plugin 'nelstrom/vim-markdown-folding'
+Plugin 'nelstrom/vim-markdown-folding'
 "Plugin 'easymotion/vim-easymotion'
 Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'

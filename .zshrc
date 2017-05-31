@@ -1,3 +1,4 @@
+export PATH="/home/tawsif/anaconda2/bin:$PATH"
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -14,13 +15,16 @@ compinit
 # End of lines added by compinstall
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-export ut=/mnt/c/Users/Tawsif/Documents/_ut/
-export doc=/mnt/c/Users/Tawsif/Documents/
-export taws=/mnt/c/Users/Tawsif/
-export proj=/mnt/c/Users/Tawsif/Documents/_projects/
-export cv=/mnt/c/Users/Tawsif/Documents/_resumes/cv/
-export down=/mnt/c/Users/Tawsif/Downloads/
-export lab=/mnt/c/Users/Tawsif/Documents/_ut/algo/labs/lab2/src/
+export ut=/mnt/c/Users/Tawsif/Documents/_ut
+export doc=/mnt/c/Users/Tawsif/Documents
+export taws=/mnt/c/Users/Tawsif
+export proj=/mnt/c/Users/Tawsif/Documents/_projects
+export cv=/mnt/c/Users/Tawsif/Documents/_resumes/cv
+export down=/mnt/c/Users/Tawsif/Downloads
+# export lab=/mnt/c/Users/Tawsif/Documents/_ut/soft/labs/lab7/src/assignment7
+# export lab=/mnt/c/Users/Tawsif/Documents/_ut/algo/labs/lab3/src
+export lab=/mnt/c/Users/Tawsif/Documents/_ut/comp/labs/lab6
+export app=/mnt/c/Users/Tawsif/AndroidStudioProjects
 
 autoload -Uz colors
 colors
@@ -43,13 +47,13 @@ alias ll='ls -l'
 alias la='ls -a'
 alias ai='sudo apt-get install'
 alias ar='sudo apt-get remove'
-alias s='ssh toad'
-ss () {
-    scp "$*" toad:.;
-}
-sr () {
-    scp toad:"$*" .;
-}
+# alias s='ssh toad'
+# ss () {
+    # scp "$*" toad:.;
+# }
+# sr () {
+    # scp toad:"$*" .;
+# }
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -am'
@@ -61,9 +65,10 @@ alias m='make'
 alias mm='make && make test'
 alias mc='make clean'
 
-alias n='node app.js'
+alias cc='gmcs *.cs'
+alias c='mono *.exe'
 
-alias v='vim'
+alias n='node app.js'
 
 if [[ -x "`whence -p dircolors`" ]]; then
   eval `dircolors -b ~/.dir_colors`
@@ -101,12 +106,33 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 #alias tmux="env TERM=xterm-256color tmux -2"
 
-# alias jc='javac -cp /usr/share/java/junit4-4.11.jar -d bin src/assignment4/*.java test_sample/assignment4/*.java'
-# alias j='java -cp bin assignment4.Main'
+# alias jc='javac -cp /usr/share/java/junit4-4.11.jar -d bin src/assignment5/*.java test_sample/assignment5/*.java'
+# alias j='java -cp bin assignment5.Main'
 # alias jt='java -cp /usr/share/java/junit4-4.11.jar:/usr/share/java/hamcrest-core-1.3.jar:bin org.junit.runner.JUnitCore assignment4.A4SampleTest2'
-alias jc='javac *.java'
-alias jcc='rm *.class'
-alias j='java Driver'
+# alias jc='javac *.java'
+# alias jcc='rm *.class'
+# alias j='java Driver'
+# alias jc='javac -d ../../bin *.java'
+# alias j='cp Main.fxml ../../bin/assignment5/Main.fxml && java -cp ../../bin assignment5.Main'
+# alias jc='javac -d bin src/assignment5/*.java'
+# alias j='cp src/assignment5/Main.fxml bin/assignment5/Main.fxml && java -cp bin assignment5.Main'
+# alias jc='javac -cp /usr/share/java/junit4-4.11.jar -d bin quiz9/heap/*.java'
+# alias jt='java -cp /usr/share/java/junit4-4.11.jar:/usr/share/java/hamcrest-core-1.3.jar:bin org.junit.runner.JUnitCore quiz9.heap.TestMinHeap'
+
+# 422C project 6
+# alias jc='javac -cp /usr/share/java/junit4-4.11.jar -d bin *.java'
+# alias j='java -cp bin assignment6.BookingClient'
+# alias jt='java -cp /usr/share/java/junit4-4.11.jar:/usr/share/java/hamcrest-core-1.3.jar:bin org.junit.runner.JUnitCore assignment6.Test'
+
+# 422C project 7
+alias j='javac -d ../../bin *.java'
+alias js='cp *.fxml *.css *.png *.jpg ../../bin/assignment7/ && java -cp ../../bin assignment7.ServerMain'
+alias jc='java -cp ../../bin assignment7.ClientMain'
+alias jcc='rm ../../bin/assignment7/*'
+
+# algo project 3
+# alias jc='javac -d ../bin *.java'
+# alias j='java -cp ../bin TestRunner'
 
 bindkey "^?" backward-delete-char
 

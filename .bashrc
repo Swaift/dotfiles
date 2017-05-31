@@ -130,3 +130,6 @@ export DISPLAY=localhost:0.0
 #sh ~/.fehbg &
 i3 &> /dev/null &
 #bspwm &> /dev/null &
+
+# added by Anaconda2 4.3.1 installer
+# export PATH="/home/tawsif/anaconda2/bin:$PATH"
